@@ -30,10 +30,11 @@ while len(count_states) < 50:
         t.write(answer_state)
 
 # Reviso los estados no adivinados y guarda en archivo csv
-state_to_learn = []
-for state in all_states:
-    if state not in count_states:
-        state_to_learn.append(state)
+# state_to_learn = []
+# for state in all_states:
+#     if state not in count_states:
+#         state_to_learn.append(state)
+state_to_learn = [state for state in all_states if state not in count_states]
 
 states_dict = {
     "States to learn": state_to_learn
